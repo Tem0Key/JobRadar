@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d35">
+  <meta name="description" content="Ваш личный радар вакансий: сбор, поиск и понятный подбор подходящей работы.">
+  <title>JobRadar — ваш следующий шаг</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <svg class="icon-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="i-radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="m12 12 7-7"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8l10-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h4m4 0h8M4 17h10m4 0h2M8 4v6m6 4v6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.2 6.2A8 8 0 0 1 20 12M4 12a8 8 0 0 0 13.8 5.8"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14M10 3H3v18h18v-7"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V3h8v4M3 12a22 22 0 0 0 18 0M10 12h4v4h-4z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+  </defs></svg>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Основная навигация">
+      <a class="brand" href="#jobs" aria-label="JobRadar — вакансии"><span class="brand-mark"><svg class="icon"><use href="#i-radar"/></svg></span><span>Job<span class="brand-light">Radar</span><small>ЛИЧНЫЙ ПОИСК РАБОТЫ</small></span></a>
+      <div class="workspace-label">РАБОЧЕЕ ПРОСТРАНСТВО</div>
+      <nav class="navigation">
+        <button class="nav-item active" data-view="jobs" aria-label="Вакансии" aria-current="page" title="Вакансии"><svg class="icon"><use href="#i-grid"/></svg><span>Вакансии</span><span id="nav-count" class="nav-count">—</span></button>
+        <button class="nav-item" data-view="sources" aria-label="Источники" title="Источники"><svg class="icon"><use href="#i-layers"/></svg><span>Источники</span></button>
+        <button class="nav-item" data-view="profiles" aria-label="Профили поиска" title="Профили поиска"><svg class="icon"><use href="#i-sliders"/></svg><span>Профили поиска</span></button>
+        <button class="nav-item" data-view="activity" aria-label="История сбора" title="История сбора"><svg class="icon"><use href="#i-clock"/></svg><span>История сбора</span></button>
+      </nav>
+      <div class="sidebar-note"><span class="note-orbit"><svg class="icon"><use href="#i-globe"/></svg></span><strong>Больше возможностей.<br>Меньше шума.</strong><p>Вакансии из разных источников в одном месте.</p><span class="quiet-pill"><span class="status-dot"></span> Локальное приложение</span></div>
+      <div class="sidebar-footer"><span class="avatar">JR</span><div><strong>Моё пространство</strong><small>Персональная версия</small></div><span class="footer-dot" title="Локальные данные"></span></div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar"><div class="breadcrumb"><span>Моё пространство</span><span class="breadcrumb-slash">/</span><strong id="breadcrumb-view">Вакансии</strong></div><div class="local-indicator"><span class="status-dot"></span><span>Данные на вашем устройстве</span></div></header>
+      <main id="main" tabindex="-1">
+        <section class="page-heading"><div><div class="eyebrow" id="page-eyebrow">ВАШ СЛЕДУЮЩИЙ ШАГ</div><h1 id="page-title">Найдите свою следующую роль</h1><p id="page-subtitle">Все возможности в одном месте. Сфокусируйтесь на подходящих.</p></div><div class="collect-controls"><label class="sr-only" for="collect-source">Источники для сбора</label><select id="collect-source" aria-label="Источники для сбора"><option value="">Все источники</option><option value="greenhouse">Greenhouse</option><option value="lever">Lever</option></select><button class="button primary" id="collect-button"><svg class="icon"><use href="#i-refresh"/></svg><span>Собрать вакансии</span></button></div></section>
+        <div id="global-error" class="notice error hidden" role="alert"></div>
+        <section id="collection-banner" class="collection-banner hidden" aria-label="Ход сбора" aria-live="polite"><span class="collection-symbol"><svg class="icon"><use href="#i-radar"/></svg></span><div class="collection-copy"><strong id="collection-title">Собираем вакансии</strong><span id="collection-description">Подключаемся к источникам…</span></div><span id="collection-count" class="collection-count"></span></section>
+        <section class="stats-grid" aria-label="Общая статистика">
+          <article class="stat-card"><div class="stat-top"><span>Вакансий в базе</span><svg class="icon"><use href="#i-briefcase"/></svg></div><div id="stat-total" class="stat-number">—</div><div class="stat-bottom">Все собранные возможности</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Активных вакансий</span><span class="stat-icon success"><svg class="icon"><use href="#i-check"/></svg></span></div><div id="stat-active" class="stat-number">—</div><div class="stat-bottom"><span class="status-dot"></span> В вашей локальной базе</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Источников подключено</span><svg class="icon"><use href="#i-layers"/></svg></div><div id="stat-sources" class="stat-number">—</div><div id="stat-sources-note" class="stat-bottom">Карьерные страницы компаний</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Последний сбор</span><svg class="icon"><use href="#i-clock"/></svg></div><div id="stat-last" class="stat-number stat-date">—</div><div id="stat-last-note" class="stat-bottom">История пока пуста</div></article>
+        </section>
+        <section id="view-jobs" class="view-panel" aria-labelledby="jobs-title">
+          <div class="section-heading"><div><h2 id="jobs-title">Обзор вакансий <span id="results-count" class="count-pill">—</span></h2><p>Ваша следующая возможность уже может быть здесь.</p></div><div class="section-actions"><button id="refresh-jobs" class="button subtle" title="Обновить список"><svg class="icon"><use href="#i-refresh"/></svg><span>Обновить</span></button><details class="export-menu" id="export-menu"><summary class="button secondary"><svg class="icon"><use href="#i-download"/></svg>Экспорт<span class="chevron">⌄</span></summary><div class="dropdown"><button data-export="csv">Скачать CSV</button><button data-export="json">Скачать JSON</button><small>Все результаты с текущими фильтрами</small></div></details></div></div>
+          <div class="jobs-workspace">
+            <form id="search-form" class="search-form"><div class="search-input-wrap"><svg class="icon"><use href="#i-search"/></svg><label class="sr-only" for="query">Название, компания или ключевые слова</label><input id="query" name="query" type="search" placeholder="Название, компания или ключевые слова…" autocomplete="off"><kbd>/</kbd></div><button class="button primary search-button" type="submit">Найти <svg class="icon"><use href="#i-arrow"/></svg></button></form>
+            <div class="primary-filters"><div class="filter-field profile-filter"><label for="filter-profile">Профиль поиска</label><select id="filter-profile" name="profile"><option value="">Все вакансии</option></select></div><div class="filter-field"><label for="filter-source">Источник</label><select id="filter-source" name="source"><option value="">Все источники</option><option value="greenhouse">Greenhouse</option><option value="lever">Lever</option></select></div><div class="filter-field"><label for="filter-remote">Формат работы</label><select id="filter-remote" name="remote_type"><option value="">Любой формат</option><option value="remote">Удалённо</option><option value="hybrid">Гибрид</option><option value="onsite">Офис</option><option value="unknown">Не указан</option></select></div><div class="filter-field"><label for="filter-eligibility">Доступность по географии</label><select id="filter-eligibility" name="eligibility"><option value="">Любая доступность</option><option value="allowed">Соответствует правилам</option><option value="needs_review">Нужна проверка</option><option value="excluded">География не подходит</option></select></div></div>
+            <details class="more-filters"><summary><svg class="icon"><use href="#i-sliders"/></svg>Ещё фильтры<span id="advanced-count"></span><span class="chevron">⌄</span></summary><div class="advanced-grid"><div class="filter-field"><label for="filter-company">Компания</label><input id="filter-company" name="company" placeholder="Точное название" autocomplete="off" list="company-suggestions"><datalist id="company-suggestions"></datalist></div><div class="filter-field"><label for="filter-location">Локация</label><input id="filter-location" name="location" placeholder="Например, Costa Rica" autocomplete="off"></div><div class="filter-field"><label for="filter-seniority">Уровень</label><input id="filter-seniority" name="seniority" placeholder="Например, senior" autocomplete="off"></div><div class="filter-field"><label for="filter-language">Язык описания</label><select id="filter-language" name="language"><option value="">Любой язык</option><option value="en">Английский</option><option value="ru">Русский</option><option value="es">Испанский</option></select></div><div class="filter-field"><label for="filter-status">Статус</label><select id="filter-status" name="status"><option value="active">Активные</option><option value="all">Все статусы</option><option value="inactive">Неактивные</option><option value="unknown">Неизвестный</option></select></div></div></details>
+            <div class="results-toolbar"><div id="filter-summary">Все активные вакансии</div><button id="reset-filters" class="text-button">Сбросить фильтры</button></div>
+            <div id="profile-note" class="profile-note"><svg class="icon"><use href="#i-info"/></svg><span>Удалённая работа не всегда доступна из Коста-Рики. Проверяйте географические ограничения.</span></div>
+            <div class="jobs-table-heading" aria-hidden="true"><span>ВАКАНСИЯ / КОМПАНИЯ</span><span>ЛОКАЦИЯ И ФОРМАТ</span><span>ДОСТУПНОСТЬ</span><span></span></div>
+            <div id="jobs-list" class="jobs-list" aria-live="polite" aria-busy="true"><div class="empty-state"><span class="spinner"></span><h3>Загружаем вакансии</h3><p>Подготавливаем ваше рабочее пространство.</p></div></div>
+            <div class="pagination"><div id="page-summary">—</div><div class="pagination-controls"><label for="page-size">На странице</label><select id="page-size"><option value="25">25</option><option value="50">50</option><option value="100">100</option></select><button id="previous-page" class="page-button" aria-label="Предыдущая страница" disabled>‹</button><span id="page-indicator">1 / 1</span><button id="next-page" class="page-button" aria-label="Следующая страница" disabled>›</button></div></div>
+          </div>
+        </section>
+        <section id="view-sources" class="view-panel hidden" aria-labelledby="sources-title"><div class="section-heading"><div><h2 id="sources-title">Подключённые компании</h2><p>Публичные карьерные страницы Greenhouse и Lever.</p></div><button id="add-source" class="button secondary"><svg class="icon"><use href="#i-plus"/></svg>Добавить компанию</button></div><div class="settings-card"><div class="notice neutral"><svg class="icon"><use href="#i-info"/></svg><span>Укажите идентификатор из адреса карьерной страницы. Например: <code>boards.greenhouse.io/идентификатор</code> или <code>jobs.lever.co/идентификатор</code>. Для европейских страниц Lever выберите EU.</span></div><form id="sources-form"><div id="sources-list"></div><div class="form-footer"><span id="sources-save-note">Изменения применяются после сохранения.</span><button type="submit" class="button primary">Сохранить источники</button></div></form></div></section>
+        <section id="view-profiles" class="view-panel hidden" aria-labelledby="profiles-title"><div class="section-heading"><div><h2 id="profiles-title">Ваши поисковые профили</h2><p>Прозрачные правила поиска, которые вы контролируете.</p></div><button id="add-profile" class="button secondary"><svg class="icon"><use href="#i-plus"/></svg>Новый профиль</button></div><div class="settings-card"><div id="profile-tabs" class="profile-tabs" aria-label="Выбор профиля"></div><form id="profiles-form"><div id="profile-editor"></div><div class="form-footer"><span id="profiles-save-note">Изменения применяются после сохранения.</span><button type="submit" class="button primary">Сохранить профили</button></div></form></div></section>
+        <section id="view-activity" class="view-panel hidden" aria-labelledby="activity-title"><div class="section-heading"><div><h2 id="activity-title">История сбора</h2><p>Результаты последних 20 обращений к карьерным страницам.</p></div><button id="refresh-activity" class="button secondary"><svg class="icon"><use href="#i-refresh"/></svg>Обновить</button></div><div id="activity-list" class="activity-list"></div></section>
+        <footer class="page-footer"><span>JobRadar <span class="footer-separator">·</span> Меньше поиска. Больше возможностей.</span><span>Публичные данные · Локальное хранение</span></footer>
+      </main>
+    </div>
+  </div>
+  <dialog id="job-dialog" class="job-dialog" aria-labelledby="detail-title"><div class="dialog-top"><span>ДЕТАЛИ ВАКАНСИИ</span><button id="close-dialog" class="icon-button" aria-label="Закрыть детали"><svg class="icon"><use href="#i-close"/></svg></button></div><div id="job-details" class="job-details"></div></dialog>
+  <dialog id="confirm-dialog" class="confirm-dialog" aria-labelledby="confirm-title"><h2 id="confirm-title">Удалить запись?</h2><p id="confirm-text"></p><div class="confirm-actions"><button id="cancel-confirm" class="button secondary">Отмена</button><button id="accept-confirm" class="button danger">Удалить</button></div></dialog>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+</body>
+</html>

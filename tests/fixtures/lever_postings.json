@@ -1,0 +1,17 @@
+[
+  {
+    "id": "demo-123",
+    "text": "Network Engineer",
+    "hostedUrl": "https://jobs.lever.co/example/demo-123",
+    "categories": {"location": "Remote", "commitment": "Full-time"},
+    "workplaceType": "remote",
+    "description": "<p>HTML fallback</p>",
+    "descriptionPlain": "Maintain the network. Work with templates <T>.",
+    "lists": [{"text": "Responsibilities", "content": "<ul><li>Routing</li><li>Switching and VPN</li></ul>"}],
+    "additional": "<p>Additional HTML</p>",
+    "additionalPlain": "Must be based in Costa Rica.",
+    "salaryDescription": "<p>Salary details.</p>",
+    "salaryRange": {"min": 50000, "max": 80000, "currency": "USD", "interval": "per-year"},
+    "createdAt": 1750000000000
+  }
+]

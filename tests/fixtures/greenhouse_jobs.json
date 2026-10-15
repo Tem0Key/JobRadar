@@ -1,0 +1,15 @@
+{
+  "jobs": [
+    {
+      "id": 123456,
+      "title": "Senior Network Security Engineer",
+      "absolute_url": "https://boards.greenhouse.io/example/jobs/123456",
+      "location": {"name": "Remote - Costa Rica"},
+      "content": "&lt;h2&gt;Network &amp;amp; Security&lt;/h2&gt;&lt;p&gt;Configure Palo Alto firewalls.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;VPN and routing&lt;/li&gt;&lt;li&gt;NDR investigations&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Final paragraph.&lt;/p&gt;",
+      "updated_at": "2026-10-01T10:30:00Z",
+      "metadata": [{"name": "Employment Type", "value": "Full-time"}],
+      "departments": [{"id": 25, "name": "Engineering"}]
+    }
+  ],
+  "meta": {"total": 1}
+}

@@ -1,0 +1,51 @@
+# Verified public employer boards. Lever is a platform, not a global search identifier.
+# See README for verification commands and how to add employers.
+http:
+  timeout: 20
+  attempts: 3
+  min_interval: 1.0
+  backoff_base: 1.0
+  max_backoff: 60
+  page_size: 100
+  max_pages: 100
+
+# Offset pagination is not a transactional snapshot. Keep absence non-destructive by default.
+mark_inactive_on_complete: false
+allow_empty_deactivation: false
+
+sources:
+  - name: Cloudflare
+    source: greenhouse
+    identifier: cloudflare
+    enabled: true
+  - name: Torq
+    source: greenhouse
+    identifier: torq
+    enabled: true
+  - name: Lever
+    source: lever
+    identifier: lever
+    region: global
+    enabled: false
+  - name: Canary Technologies
+    source: lever
+    identifier: canarytechnologies
+    region: global
+    enabled: true
+  - name: Atmosera
+    source: lever
+    identifier: atmosera
+    region: global
+    enabled: true
+  # Official Lever demo: example postings, not genuine vacancies for applications.
+  - name: Lever demo (sample postings)
+    source: lever
+    identifier: leverdemo
+    region: global
+    enabled: false
+  # EU syntax (enable only after obtaining the employer's actual EU site name):
+  # - name: Employer display name
+  #   source: lever
+  #   identifier: actual-site-from-career-url
+  #   region: eu
+  #   enabled: true

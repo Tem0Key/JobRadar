@@ -1,0 +1,210 @@
+# Every nonempty filter group is ANDed; terms inside each group are ORed.
+# An unknown condition stays visible with needs_review unless include_unknown: false.
+profiles:
+  - name: Network Security
+    keywords:
+      - firewall
+      - network security
+      - Palo Alto
+      - Cisco ASA
+      - NGFW
+      - NDR
+      - SOC
+      - information security engineer
+      - security operations
+      - сетевой безопасности
+      - межсетевой экран
+      - ИБ
+    title_keywords: &security_roles
+      - network security
+      - firewall
+      - security engineer
+      - information security
+      - NDR
+      - сетевой безопасности
+      - инженер ИБ
+      - межсетевых экранов
+    exclude_title_keywords: &non_target_roles
+      - sales
+      - presales
+      - pre-sales
+      - customer
+      - account executive
+      - marketing
+      - recruiter
+      - software
+      - developer
+      - product manager
+      - data scientist
+      - director
+      - head of
+      - engineering manager
+      - GRC
+      - compliance
+      - auditor
+    exclude_keywords: []
+    companies: []
+    locations: []
+    remote_types: [remote, hybrid, onsite, unknown]
+    seniorities: []
+    languages: []
+    include_unknown: true
+    geography: &costa_rica
+      target_location: Costa Rica
+      allowed_location_terms: [Costa Rica, Коста-Рика, Коста Рика]
+      worldwide_terms: [worldwide, globally remote, work from anywhere, anywhere in the world]
+      allowed_remote_region_terms: [LATAM, Latin America, Latin American, Латинская Америка]
+      blocked_location_terms:
+        - US
+        - U.S.
+        - USA
+        - United States
+        - United States of America
+        - Canada
+        - UK
+        - U.K.
+        - United Kingdom
+        - EU
+        - European Union
+        - Europe
+        - EMEA
+        - РФ
+        - Россия
+        - US only
+        - USA only
+        - United States only
+        - Canada only
+        - UK only
+        - Europe only
+        - EU only
+        - EMEA only
+        - только РФ
+        - только Россия
+      hard_exclusion_phrases:
+        - must be based in the United States
+        - must reside in the United States
+        - must be authorized to work in the United States
+        - must be legally authorized to work in the US
+        - US residents only
+        - US citizens only
+        - U.S. citizenship required
+        - must be based in Canada
+        - must be based in the UK
+        - must be based in the European Union
+        - требуется гражданство РФ
+        - только для резидентов РФ
+  - name: Network Engineering
+    keywords:
+      - network engineer
+      - network administrator
+      - routing
+      - switching
+      - VPN
+      - сетевой инженер
+    title_keywords: &network_roles
+      - network engineer
+      - network administrator
+      - network deployment engineer
+      - network infrastructure
+      - network automation
+      - network systems
+      - сетевой инженер
+      - сетевой администратор
+      - администратор сети
+    exclude_title_keywords: *non_target_roles
+    exclude_keywords: []
+    remote_types: [remote, hybrid, onsite, unknown]
+    include_unknown: true
+    geography: *costa_rica
+  - name: Security Operations
+    title_keywords: &soc_roles
+      - SOC analyst
+      - SOC engineer
+      - SOC security engineer
+      - SOC solutions architect
+      - security operations
+      - security analyst
+      - detection engineer
+      - incident response
+      - threat detection
+      - аналитик SOC
+      - аналитик ИБ
+      - реагирования на инциденты
+    exclude_title_keywords: *non_target_roles
+    include_unknown: true
+    geography: *costa_rica
+  - name: Мой поиск
+    # Focus on network/firewall/NDR/SOC and security operations, with title evidence.
+    # Generic Security Engineer titles require manual search in the full inventory.
+    title_keywords:
+      - network security
+      - firewall
+      - NGFW
+      - NDR
+      - network detection and response
+      - network engineer
+      - network administrator
+      - network deployment engineer
+      - network infrastructure
+      - network automation
+      - network systems
+      - SOC analyst
+      - SOC engineer
+      - SOC security engineer
+      - SOC solutions architect
+      - security operations
+      - security analyst
+      - security administrator
+      - security infrastructure
+      - detection engineer
+      - incident response
+      - threat detection
+      - сетевой инженер
+      - сетевой администратор
+      - администратор сети
+      - сетевой безопасности
+      - аналитик SOC
+      - аналитик ИБ
+      - межсетевых экранов
+      - межсетевой экран
+      - эксплуатации ИБ
+      - эксплуатации СЗИ
+      - эксплуатации средств защиты
+      - администратор СЗИ
+      - администратор информационной безопасности
+      - реагирования на инциденты
+    exclude_title_keywords:
+      - sales
+      - presales
+      - pre-sales
+      - customer
+      - account executive
+      - marketing
+      - recruiter
+      - software
+      - developer
+      - product manager
+      - data scientist
+      - director
+      - head of
+      - engineering manager
+      - GRC
+      - compliance
+      - auditor
+      - IAM
+      - identity
+      - access management
+      - product security
+      - application security
+      - AppSec
+      - research
+      - researcher
+      - research scientist
+      - исследователь
+      - безопасность приложений
+      - безопасности приложений
+      - управление доступом
+      - управления доступом
+    include_unknown: true
+    geography: *costa_rica
+default_profile: Мой поиск
